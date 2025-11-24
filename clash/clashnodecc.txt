@@ -1,4 +1,476 @@
-未获取到节点，错误代码：404 Client Error: Not Found for url: https://node.clashnode.cc/uploads/2025/11/0-20251124.yaml
+# ;不要随意改变关键字，否则会导致出错
+# ;acl4SSR规则
+# ;去广告：支持
+# ;自动测速：支持
+# ;微软分流：不支持
+# ;苹果分流：不支持
+# ;增强中国IP段：不支持
+# ;增强国外GFW：不支持
+# ;ruleset=🎯 全球直连,[]GEOIP,LAN
+
+mixed-port: 7890
+allow-lan: false
+mode: rule
+ipv6: false
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+
+
+proxies:
+  - type: vmess
+    name: 🇭🇰HK²_3|2.0MB/s|YT|NF|X
+    server: n1747969945.xlxzzx.com
+    port: 443
+    uuid: 192217b5-fd9f-4e08-9c74-1726f83af848
+    alterId: 0
+    network: ws
+    cipher: auto
+    ws-opts:
+      path: /
+    tls: true
+  - type: vmess
+    name: 🇭🇰HK²_5|5.3MB/s|2%|GPT⁺|YT|NF|D+|X
+    server: hkt.gotochinatown.net
+    port: 80
+    uuid: 384d1b42-655f-11ed-a8bf-f23c91cfbbc9
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: hkt.gotochinatown.net
+    ws-opts:
+      path: /
+      headers:
+        Host: hkt.gotochinatown.net
+  - type: vless
+    name: 🇰🇷_KR_韩国
+    server: 211.252.50.74
+    port: 30004
+    uuid: 78fc9ba9-9c68-4b49-891f-ea9e38bd3b56
+    network: ws
+    servername: ak.suoni.nyc.mn
+    tls: true
+    ws-opts:
+      path: /proxyip=sjc.o00o.ooo
+      headers:
+        Host: ak.suoni.nyc.mn
+    client-fingerprint: random
+  - type: vless
+    name: 🇨🇳_CN_中国
+    server: 8.217.180.234
+    port: 443
+    uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
+    network: ws
+    servername: kuangbao.xiejiang.dpdns.org
+    tls: true
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: kuangbao.xiejiang.dpdns.org
+  - type: trojan
+    name: 🇨🇳_CN_中国_1
+    server: psg2-ag.t.sgateway.link
+    port: 5223
+    password: Q9gofGxinwLv0TfDfdKmdttdPGxrhKQS
+    network: tcp
+    sni: pod-kr-g1.psusercontent.com
+    tls: true
+  - type: trojan
+    name: 🇺🇸_US_美国
+    server: 104.25.254.4
+    port: 2087
+    password: d0298536-d670-4045-bbb1-ddd5ea68683e
+    network: ws
+    sni: azadnet-bdr.pages.dev
+    tls: true
+    ws-opts:
+      path: /azadnet-bdr.pages.dev/?ed=2560&PROT_TYPE=trojan
+  - type: vless
+    name: 🇺🇸_US_美国_1
+    server: 68.64.176.135
+    port: 443
+    uuid: 78fc9ba9-9c68-4b49-891f-ea9e38bd3b56
+    network: ws
+    servername: ak.suoni.nyc.mn
+    tls: true
+    ws-opts:
+      path: /proxyip=sjc.o00o.ooo
+      headers:
+        Host: ak.suoni.nyc.mn
+    client-fingerprint: random
+  - type: vless
+    name: 🇺🇸_US_美国_2
+    server: 69.84.182.13
+    port: 443
+    uuid: 312d3555-d7a3-4674-869a-0e5b7ee03a35
+    network: ws
+    servername: fr-1-fr-1.aiopen.sbs
+    tls: true
+    ws-opts:
+      path: /kbjc/fr1
+      headers:
+        Host: fr-1-fr-1.aiopen.sbs
+    client-fingerprint: chrome
+  - type: vless
+    name: 🇯🇵_JP_日本
+    server: 18.183.89.240
+    port: 443
+    uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
+    network: ws
+    servername: kuangbao.xiejiang.dpdns.org
+    tls: true
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: kuangbao.xiejiang.dpdns.org
+  - type: trojan
+    name: 🇷🇺_RU_俄罗斯
+    server: 89.110.120.197
+    port: 443
+    password: 35f8e682-54bd-42c7-b537-94a8e4c84bcd
+    network: ws
+    sni: joss.gpj1.web.id
+    tls: true
+    ws-opts:
+      path: /Free-VPN-CF-Geo-Project/89.110.120.197=443
+      headers:
+        Host: joss.gpj1.web.id
+  - type: vless
+    name: 🇺🇸_US_美国_3
+    server: ge1.clear-vpn.org
+    port: 443
+    uuid: 83367474-3a42-4aa8-a74f-82e930370975
+    network: tcp
+    servername: ge1.clear-vpn.org
+    tls: true
+    encryption: none
+    reality-opts:
+      public-key: tCsa9mOLB6gCTdF4cx-s4BhckPBw846-cxggHOhmkyw
+      short-id: fb228829c3da833b
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇯🇵_JP_日本_1
+    server: 52.68.194.189
+    port: 443
+    uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
+    network: ws
+    servername: kuangbao.xiejiang.dpdns.org
+    tls: true
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: kuangbao.xiejiang.dpdns.org
+  - type: vless
+    name: 🇨🇭_CH_瑞士
+    server: 94.142.255.97
+    port: 443
+    uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
+    network: ws
+    servername: kuangbao.xiejiang.dpdns.org
+    tls: true
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: kuangbao.xiejiang.dpdns.org
+  - type: vless
+    name: 🇸🇦_SA_沙特阿拉伯
+    server: 77.110.119.225
+    port: 443
+    uuid: 4819860c-0e62-4804-9c59-967e5c2bed7a
+    network: tcp
+    servername: st.ozone.ru
+    tls: true
+    reality-opts:
+      public-key: hnec5SxCD6Os-u0FNi_YS5CML1a_oWb0niZJ1mGuFBo
+      short-id: 07e904766d29b958
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+  - type: trojan
+    name: 🇨🇳_CN_中国_2
+    server: 58.152.25.241
+    port: 443
+    password: BxceQaOe
+    network: tcp
+    sni: t.me/ripaojiedian
+    skip-cert-verify: true
+  - type: vless
+    name: 🇩🇪_DE_德国
+    server: broodmother.fonixapp.org
+    port: 55376
+    uuid: 7840aa0d-0a95-4be6-a813-cfacb5290391
+    network: tcp
+    servername: yelp.com
+    tls: true
+    encryption: none
+    reality-opts:
+      public-key: eRuDPGgOwmAbFaNZtqzEfgflU4Jaj2MJNYwAQPkp32s
+      short-id: 23f89c
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇷🇺_RU_俄罗斯_1
+    server: ams.telegavpn.org
+    port: 19057
+    cipher: chacha20-ietf-poly1305
+    password: GGVAfjuKPrwZslPDu8zoZK
+  - type: vless
+    name: 🇷🇺_RU_俄罗斯_2
+    server: zcreat.ethervpn.fun
+    port: 8443
+    uuid: a47595a8-1add-401a-8189-e6799f8d8628
+    network: ws
+    servername: zcreat.ethervpn.fun
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /websocketpl?ed=2047
+      headers:
+        Host: zcreat.ethervpn.fun
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: trojan
+    name: 🇨🇭_CH_瑞士_1
+    server: 138.124.30.8
+    port: 443
+    password: 0311306e-56d4-4aa1-bde5-8cede7fcd3e4
+    network: ws
+    sni: joss.gpj1.web.id
+    tls: true
+    ws-opts:
+      path: /Free-VPN-CF-Geo-Project/138.124.30.8=443
+      headers:
+        Host: joss.gpj1.web.id
+  - type: vless
+    name: 🇺🇸_US_美国_4
+    server: lifestealer.fonixapp.org
+    port: 45831
+    uuid: bcc42ff2-fa30-434c-aab8-8ace19cff555
+    network: tcp
+    servername: stackoverflow.com
+    tls: true
+    encryption: none
+    reality-opts:
+      public-key: 6-45Hxz3UsSI3vDzHSGGuDqqEzqwFxEQyl_0sZoMejs
+      short-id: 86e86c
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+  - type: trojan
+    name: 🇨🇳_CN_中国_3
+    server: hk3.t.sgateway.link
+    port: 5223
+    password: Q9gofGxinwLv0TfDfdKmdttdPGxrhKQS
+    network: tcp
+    sni: pod-hk-z1.psusercontent.com
+    tls: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇭🇰HK²_3|2.0MB/s|YT|NF|X
+      - 🇭🇰HK²_5|5.3MB/s|2%|GPT⁺|YT|NF|D+|X
+      - 🇰🇷_KR_韩国
+      - 🇨🇳_CN_中国
+      - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_2
+      - 🇯🇵_JP_日本
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_3
+      - 🇯🇵_JP_日本_1
+      - 🇨🇭_CH_瑞士
+      - 🇸🇦_SA_沙特阿拉伯
+      - 🇨🇳_CN_中国_2
+      - 🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇨🇭_CH_瑞士_1
+      - 🇺🇸_US_美国_4
+      - 🇨🇳_CN_中国_3
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 🇭🇰HK²_3|2.0MB/s|YT|NF|X
+      - 🇭🇰HK²_5|5.3MB/s|2%|GPT⁺|YT|NF|D+|X
+      - 🇰🇷_KR_韩国
+      - 🇨🇳_CN_中国
+      - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_2
+      - 🇯🇵_JP_日本
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_3
+      - 🇯🇵_JP_日本_1
+      - 🇨🇭_CH_瑞士
+      - 🇸🇦_SA_沙特阿拉伯
+      - 🇨🇳_CN_中国_2
+      - 🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇨🇭_CH_瑞士_1
+      - 🇺🇸_US_美国_4
+      - 🇨🇳_CN_中国_3
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇭🇰HK²_3|2.0MB/s|YT|NF|X
+      - 🇭🇰HK²_5|5.3MB/s|2%|GPT⁺|YT|NF|D+|X
+      - 🇰🇷_KR_韩国
+      - 🇨🇳_CN_中国
+      - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_2
+      - 🇯🇵_JP_日本
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_3
+      - 🇯🇵_JP_日本_1
+      - 🇨🇭_CH_瑞士
+      - 🇸🇦_SA_沙特阿拉伯
+      - 🇨🇳_CN_中国_2
+      - 🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇨🇭_CH_瑞士_1
+      - 🇺🇸_US_美国_4
+      - 🇨🇳_CN_中国_3
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/providers/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/providers/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/providers/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/providers/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/providers/SteamCN.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/providers/Telegram.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/providers/ProxyMedia.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/providers/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/providers/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/providers/ChinaCompanyIp.list
+    interval: 86400
+
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🛑 全球拦截
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Telegram,🚀 节点选择
+  - RULE-SET,ProxyMedia,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
 port: 7890
 socks-port: 7891
 allow-lan: true
